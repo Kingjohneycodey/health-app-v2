@@ -1,13 +1,13 @@
 import Image from 'next/image';
 
-export default function () {
+export default function SignIn() {
   return (
-    <div className="flex gap-5 md:w-5/6 m-auto px-5 items-center justify-center h-screen">
+    <div className="flex gap-5 md:w-5/6 m-auto px-5 items-center justify-center h-screen border">
       <form className="space-y-5 md:w-1/2">
         <h3 className="text-2xl font-bold text-primary">
           Sign Up Your Account
         </h3>
-        <p>Let's enter your data to continue doctrine services </p>
+        <p>Lets enter your data to continue doctrine services </p>
 
         <div className="space-y-3">
           <div className="space-y-1 flex flex-col">
@@ -74,7 +74,7 @@ export default function () {
         </div>
       </form>
       <div className="hidden md:block w-1/2">
-        <Image src="" alt="" />
+        <Image width={800} height={1000} src="/signup-image.jpg" alt="" className='cover object-cover' />
       </div>
     </div>
   );

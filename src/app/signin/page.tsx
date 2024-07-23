@@ -5,7 +5,7 @@ export default function SignIn() {
     <div className="flex gap-5 md:w-5/6 m-auto px-5 items-center justify-center h-screen">
       <form className="space-y-5 md:w-1/2">
         <h3 className="text-2xl font-bold text-primary">Welcome to Doctrine</h3>
-        <p>Enter your details t use doctrine services </p>
+        <p>Enter your details to use doctrine services </p>
 
         <div className="space-y-3">
           <div className="space-y-1 flex flex-col">
@@ -62,7 +62,7 @@ export default function SignIn() {
         </div>
       </form>
       <div className="hidden md:block w-1/2">
-        <Image src="" alt="" />
+        <Image src="/signin-image.jpg" width={800} height={1000} alt="" />
       </div>
     </div>
   );
