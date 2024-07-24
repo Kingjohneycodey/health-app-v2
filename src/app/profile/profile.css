@@ -1,0 +1,30 @@
+/* doctor profile css styling  */
+.edit {
+    position: relative;
+    bottom: 50px;
+    left: 30px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+  }
+  
+  .profile_img {
+    min-height: 100%;
+    width: 100%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .side_round {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  @media screen and (max-width: 650px) {
+    .edit {
+        position: relative;
+        bottom: 60px;
+        left: 0px;
+        border: 3px solid #fff;
+        border-radius: 50%;
+      }
+  }
