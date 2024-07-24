@@ -30,6 +30,7 @@ const Editprofile = () => {
 
   return (
     <main>
+      <p>h</p>
       <section className="doctor-layout menu">
         <section className="m-4">
           <h1 className="text-xl font-semibold text-[#103F74]">Edit Profile</h1>
