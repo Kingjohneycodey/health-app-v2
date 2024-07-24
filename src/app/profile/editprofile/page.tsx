@@ -1,32 +1,32 @@
 'use client';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 import editBackground from '../../../../public/assets/editbackground.png';
 import frame1 from '../../../../public/assets/frame1.png';
 import Image from 'next/image';
 
 const Editprofile = () => {
-  const [profilePicUrl, setProfilePicUrl] = useState(() => {
-    return localStorage.getItem('profilePicUrl') || frame1;
-  });
+  // const [profilePicUrl, setProfilePicUrl] = useState(() => {
+  //   return localStorage.getItem('profilePicUrl') || frame1;
+  // });
 
-  useEffect(() => {
-    const inputFile = document.getElementById('input-file');
+  // useEffect(() => {
+  //   const inputFile = document.getElementById('input-file');
 
-    const handleFileChange = () => {
-      const file = inputFile.files[0];
-      if (file) {
-        const imageUrl = URL.createObjectURL(file);
-        setProfilePicUrl(imageUrl);
-        localStorage.setItem('profilePicUrl', imageUrl);
-      }
-    };
+  //   const handleFileChange = () => {
+  //     const file = inputFile.files[0];
+  //     if (file) {
+  //       const imageUrl = URL.createObjectURL(file);
+  //       setProfilePicUrl(imageUrl);
+  //       localStorage.setItem('profilePicUrl', imageUrl);
+  //     }
+  //   };
 
-    inputFile.addEventListener('change', handleFileChange);
+  //   inputFile.addEventListener('change', handleFileChange);
 
-    return () => {
-      inputFile.removeEventListener('change', handleFileChange);
-    };
-  }, []);
+  //   return () => {
+  //     inputFile.removeEventListener('change', handleFileChange);
+  //   };
+//   }, []);
 
   return (
     <main>
@@ -51,7 +51,7 @@ const Editprofile = () => {
 
             <div className="flex items-center gap-4">
               <Image
-              src={profilePicUrl}
+              src={frame1}
               alt="Profile Picture"
               className="my-3 rounded-full" 
               width={50}
@@ -59,13 +59,13 @@ const Editprofile = () => {
               priority
             />
               <label htmlFor="input-file" className='my-3 bg-[#103F74] p-3 px-6 py-3 text-white rounded-lg text-xs smm:px-4 lgg:px-3'>Change Photo</label>
-              <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" className="hidden" />
+              {/* <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file" className="hidden" /> */}
               <button
                 className="border-[#A9B4CD] border-[2px] border-[solid] py-3 px-6 rounded-lg text-xs smm:px-4 lgg:px-3"
-                onClick={() => {
-                  setProfilePicUrl(frame1);
-                  localStorage.removeItem('profilePicUrl');
-                }}
+                // onClick={() => {
+                //   setProfilePicUrl(frame1);
+                //   localStorage.removeItem('profilePicUrl');
+                // }}
               >
                 Remove Photo
               </button>
@@ -91,7 +91,7 @@ const Editprofile = () => {
 
           <div className="block">
             <label htmlFor="name" className="text-[#103F74] font-semibold my-4 text-sm">Profile description</label>
-            <textarea rows="5" cols="33" className="w-[100%] my-2 p-3 border-[#DFE8F6] border-[2px] border-solid rounded-lg text-sm" placeholder="Input your profile description here"></textarea>
+            <textarea  className="w-[100%] my-2 p-3 border-[#DFE8F6] border-[2px] border-solid rounded-lg text-sm" placeholder="Input your profile description here"></textarea>
           </div>
         </section>
 
@@ -102,6 +102,6 @@ const Editprofile = () => {
       </section>
     </main>
   );
-};
+}
 
 export default Editprofile;
