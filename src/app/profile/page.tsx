@@ -9,13 +9,13 @@ import download from '../../../public/assets/download.png'
 import Link from 'next/link'
 import Image from 'next/image'
 import './profile.css'
-import { useRouter } from 'next/router'
+// import { useRouter } from 'next/router'
 
 const DoctorProfile = () => {
-  const handleClick = () => {
-    const router = useRouter()
-    router.push('profile/editprofile')
-  }
+  // const handleClick = () => {
+  //   const router = useRouter()
+  //   router.push('profile/editprofile')
+  // }
   return (
     <main>
     <section className="doctor-layout menu">
@@ -88,9 +88,7 @@ const DoctorProfile = () => {
                     width={20}
                     height={24}
                     priority
-                  onClick={() => {
-                  handleClick()
-                }}/>
+                 />
                 
                         <p className='text-sm text-[#2B7BAE smm:hidden'>Edit Profile</p>
                     </div></Link> 
