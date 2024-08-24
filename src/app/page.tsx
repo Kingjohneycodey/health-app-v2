@@ -1,9 +1,20 @@
-import Image from "next/image";
+
+import Nav from "./Nav/Nav";
+import Sidebar from "@/components/sidebar/sidebar";
+import Avatar from "../assets/img/profile.jpg"
+
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Health App</h1>
+    <main className="pt-4">
+      <div className="flex flex-row flex-wrap">
+      <Sidebar 
+      avatar={Avatar}
+      heading="Richard Ronalds"
+      address="Preston Inglewood Maine 98380"
+      />
+      </div>
+     
     </main>
   );
 }
