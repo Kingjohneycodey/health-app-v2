@@ -16,9 +16,9 @@ import Avatar7 from '../../assets/img/mine6.jpg'
 const PatientSection: React.FC = () => {
   return (
     <div className="px-10">
-      <h1 className="text-[#00008b] text-4xl font-bold pt-10 pb-4">Patient List</h1>
+      <h1 className="text-4xl smm:text-[18px] text-[#00008b] font-bold pt-10 pb-4">Patient List</h1>
       <div className="flex flex-row justify-between mb-4">
-        <div className="relative w-[400px]">
+        <div className="relative w-[400px] smm:mr-4">
           <AiOutlineSearch
             className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"
             size={20}
@@ -32,12 +32,12 @@ const PatientSection: React.FC = () => {
         <div className="flex flex-row gap-4">
           <div className="flex flex-row gap-2 py-2 rounded-lg px-4 items-center bg-gray-200">
             <IoDownloadOutline size={25} color="#00008b" />
-            <h2 className="font-bold text-[#00008b]">Download Report</h2>
+            <h2 className="smm:hidden font-bold text-[#00008b]">Download Report</h2>
           </div>
 
           <div className="flex flex-row gap-2 py-2 rounded px-4 items-center bg-gray-200">
             <CiFilter size={25} color="#00008b" />
-            <h2 className="font-bold text-[#00008b]">Filter</h2>
+            <h2 className="smm:hidden font-bold text-[#00008b]">Filter</h2>
           </div>
         </div>
       </div>
